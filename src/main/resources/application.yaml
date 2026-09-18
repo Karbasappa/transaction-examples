@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: transaction-examples
+
+  datasource:
+    # JDBC URL for Oracle (Thick or Thin driver). Update host, port, and SID/Service Name.
+    url: jdbc:oracle:thin:@//localhost:1521/FREEPDB1
+    # Your Oracle database username
+    username: sab
+    # Your Oracle database password
+    password: "Dev@123"
+    # The Oracle JDBC Driver class name
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: update # Options: none, validate, update, create, create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8081
+
